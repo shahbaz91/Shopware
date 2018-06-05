@@ -1,0 +1,554 @@
+// Amazon Pay Versandart wählen aus 1. Persönliche Daten entfernen
+.register--personal-data .information--panel-item .content--confirm {
+  display: none;
+}
+
+.is--act-shippingpayment #one-page-checkout {
+  span.panel--td {
+    .unitize-width(200);
+  }
+}
+
+// SEPA Lastschrift Erweiterung SW5
+#sepaMandat {
+  .unitize-width(300) !important;
+}
+
+// Felder von Bankdata immer auf 100% einstellen
+@media screen and(min-width: @desktopViewportWidth) {
+  .is--act-shippingpayment #one-page-checkout {
+    .btn.main--actions {
+      .unitize(margin-right, 20);
+    }
+
+    .method--bankdata {
+      .js--fancy-select {
+        width: 80% !important;
+      }
+      select {
+        width: 100% !important;
+      }
+      input {
+        width: 100% !important;
+      }
+      span.panel--td {
+        width: 100% !important;
+      }
+
+      .stripe-payment-card-form input, .stripe-payment-sepa-form input, .stripe-payment-card-form .StripeElement, .stripe-payment-sepa-form .StripeElement, .stripe-payment-card-form .saved-cards .js--fancy-select, .stripe-payment-sepa-form .saved-cards .js--fancy-select, .stripe-payment-card-form .country-selection .js--fancy-select, .stripe-payment-sepa-form .country-selection .js--fancy-select {
+        width: 80% !important;
+      }
+
+      .stripe-payment-card-form {
+        .saved-cards {
+          .unitize-width(200);
+        }
+      }
+    }
+  }
+}
+
+// Amazon Payment Shipment Area hide
+#apaShippingPaymentForm {
+  display: none;
+}
+
+#ppplus {
+  .unitize(padding-left, 16) !important;
+}
+
+#one-page-checkout {
+  .unitize-width(342);
+
+  #AmazonLoginAndPayButton1 {
+    clear: both;
+    #OffAmazonPaymentsWidgets2 {
+      float: none;
+    }
+  }
+
+  .js--fancy-select {
+    margin-bottom: 0;
+  }
+
+  .register--content .register--field {
+    margin-bottom: 0;
+  }
+
+  .register--login-email.form-padding-bottom {
+    padding-bottom: 0;
+  }
+
+  .register--street {
+    clear: both;
+    .unitize(padding-top, 10);
+  }
+
+  .register--shipping-country, .register--country {
+    clear: both;
+    .unitize(padding-top, 10);
+  }
+
+  .register--shipping-country.js--fancy-select, .register--country.js--fancy-select {
+    padding-top: 0;
+  }
+
+  .more--shipping-payment-link {
+    float: right;
+    display: none;
+  }
+
+  .payment--method-headline.panel--title, h2.panel--title, .panel--title.is--underline {
+    .unitize(font-size, 14);
+    padding-bottom: 0;
+    text-align: left;
+  }
+
+  .additional--features {
+    .feature--user-comment {
+      textarea {
+        height: 80px;
+      }
+    }
+  }
+
+  .product--table .content--title {
+    .unitize(font-size, 14);
+  }
+
+  .product--table .content {
+    .unitize(font-size, 12);
+  }
+
+  .product--table .delivery--information {
+    .unitize(font-size, 12);
+  }
+
+  h2 {
+    margin-bottom: 0;
+  }
+
+  h3.payment--method-headline {
+    .unitize(padding-top, 20);
+    .unitize(line-height, 18);
+  }
+
+  .panel--body.is--wide {
+    padding-left: 0;
+  }
+
+  .shipping-payment--information {
+    .payment--method-list {
+      margin-bottom: 0;
+      .panel--body.is--wide {
+        padding-bottom: 0;
+      }
+    }
+  }
+
+  // Fixing Abstand Checkbox AGB Text
+  .register--content .register--privacy input[type="checkbox"] {
+    margin: 0;
+  }
+
+  // SwagBonussystem
+  .bonus--basket-slider {
+    .unitize-height(355);
+  }
+
+  @media screen and(min-width: @phoneLandscapeViewportWidth) {
+    width: auto;
+  }
+
+  display: inline-block;
+
+  .register--login {
+    margin-top: 0;
+    width: 100%;
+  }
+  .register--content {
+    display: block;
+    width: 100%;
+    margin-top: 0;
+
+    .js--fancy-select {
+      width: 100%;
+    }
+
+    .register--privacy {
+      border: none;
+    }
+  }
+
+  // AGB on Top
+  .agb--on-top {
+    width: 100%;
+    @media screen and(min-width: @desktopViewportWidth) {
+      .unitize-width(1122);
+    }
+    .unitize(margin-bottom, 20);
+    .unitize-padding(0, 20, 20, 20);
+
+    .column--checkbox {
+      margin-right: 0.75rem;
+      width: auto;
+    }
+
+    .column--label {
+      display: block;
+      font-weight: normal;
+      text-align: left;
+      width: 90%;
+    }
+  }
+
+  // Billpay Optimierung
+  .bpy-checkout-container.bpy {
+    margin-left: 0 !important;
+
+    .row.header-row {
+      margin-left: 0 !important;
+    }
+
+    .terms-of-service-row.bpy-val.fv-form-bootstrap {
+      padding-left: 0 !important;
+
+      .col-lg-11.col-md-11.col-sm-11.col-xs-12 {
+        padding-left: 0 !important;
+      }
+    }
+  }
+
+
+  // Weiter Button bei Shipping/Payment verstecken
+  #opc-change-payment-area .confirm--actions {
+    display: none;
+  }
+
+  .step-icon {
+    background-clip: padding-box;
+    background-color: #7e8083;
+    background-image: linear-gradient(to bottom, #7e8083 0%, #6b6d6f 100%);
+    border-radius: 22px;
+    color: #fff;
+    display: inline-block;
+    font-size: 1.25rem;
+    font-weight: bold;
+    padding: 0.625rem 1rem;
+    text-align: center;
+    width: 2.875rem;
+    margin-right: 10px;
+  }
+
+  .not-logged-in::after {
+    background-color: rgba(255,255,255, 0.8);
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+
+  .sidebar-main {
+    display: none;
+  }
+
+  #opc-login-link {
+    cursor: pointer;
+  }
+
+  #opc-login-link::after {
+    color: inherit;
+    content: "";
+    font-family: "shopware";
+    font-size: 0.375rem;
+    font-weight: normal;
+    height: 1rem;
+    line-height: 1rem;
+    width: 1rem;
+    float: right;
+  }
+
+  #opc-login-link.is--active::after {
+    content: "";
+  }
+
+  .register--personal {
+    .panel--body {
+      padding-bottom: 0;
+    }
+
+    #opc-register-link {
+      cursor: pointer;
+    }
+
+    #opc-register-link::after {
+      color: inherit;
+      content: "";
+      font-family: "shopware";
+      font-size: 0.375rem;
+      font-weight: normal;
+      height: 1rem;
+      line-height: 1rem;
+      width: 1rem;
+      float: right;
+    }
+
+    #opc-register-link.is--active::after {
+      content: "";
+    }
+
+    .register-btn {
+      .unitize(margin-bottom, 20);
+    }
+
+  }
+  .register--address, .register--shipping, .change-shipping-form {
+    .panel--body {
+      padding-top: 0;
+
+      .register--field-zipcode {
+        .unitize(width, 70);
+      }
+
+      .register--field-city {
+        .unitize(width, 252);
+      }
+    }
+  }
+
+
+  .register--personal-data .panel--actions {
+    padding-left: 0;
+  }
+
+  .panel--title.is--underline {
+    margin-left: 0;
+  }
+
+  .panel--body.is--wide {
+    margin-left: 0;
+  }
+
+  .form-padding-bottom {
+    .unitize(padding-bottom, 10);
+  }
+
+  .register--personal-data {
+    position: relative;
+    width: 100%;
+
+    @media screen and(min-width: @desktopViewportWidth) {
+      width: 32%;
+    }
+
+    float: left;
+    display: table;
+    .unitize(padding-left, 20);
+    .unitize(margin-right, 10);
+
+    h3 {
+      margin-top: 0;
+    }
+
+    .select-billing-form {
+      padding-top: 0;
+    }
+
+    .select-shipping-form {
+      padding-top: 0;
+    }
+  }
+
+  .register--shipment-and-payment {
+    .unitize(padding-left, 20);
+    .unitize(margin-right, 10);
+
+    width: 100%;
+
+    @media screen and(min-width: @desktopViewportWidth) {
+      width: 32%;
+    }
+
+    float: left;
+    display: table;
+    position: relative;
+
+    .payment--method-list.has--border {
+      border: none;
+    }
+
+    .dispatch--method-list.has--border {
+      border: none;
+    }
+  }
+
+  .register--overview {
+    .unitize(padding-left, 20);
+    .unitize(padding-right, 20);
+
+    width: 100%;
+
+    @media screen and(min-width: @desktopViewportWidth) {
+      width: 31%;
+    }
+    float: left;
+    display: table;
+    position: relative;
+
+    .product--essential-features {
+      overflow: hidden;
+      width: 100%;
+    }
+
+    .product--table {
+      .unitize(margin-top, 26);
+
+      .basket--badge {
+        display: none;
+      }
+
+      .product--delivery {
+        width: 100%;
+      }
+
+      .column--label {
+        display: block;
+      }
+
+      .column--unit-price {
+        width: 30%;
+        padding-top: 0;
+        .unitize(line-height, 22);
+      }
+
+      .column--tax-price {
+        display: none;
+        width: 46%;
+        padding-top: 0;
+        .unitize(line-height, 22);
+      }
+
+      .column--product {
+        width: 100%;
+
+        .column--image {
+          width: 20%;
+        }
+
+        .table--content {
+          width: 246px;
+        }
+      }
+
+      .column--quantity {
+        width: 23%;
+        padding-top: 0;
+
+        .js--fancy-select {
+          float: left;
+        }
+      }
+
+      .column--total-price {
+        width: 26%;
+        padding-top: 0;
+        float: right;
+        .unitize(line-height, 22);
+
+        /**.column--label {
+          width: 68%;
+        }
+
+        .column--label:after {
+          content: ": ";
+        }*/
+      }
+
+      .column--actions {
+        padding-top: 0;
+        position: absolute;
+        .unitize(right, 14);
+      }
+
+      .row--product.is--last-row {
+        border-bottom: 0;
+      }
+
+      .table--aggregation {
+        display: none;
+      }
+
+      .aggregation--list {
+        width: 100%;
+        .unitize(padding-right, 14);
+      }
+
+      .product--table .table--actions {
+        .unitize(padding-top, 20);
+      }
+
+    }
+
+    .add-voucher--form {
+      .add-voucher--field {
+        .unitize(margin-bottom, 10);
+      }
+
+      .add-voucher--button {
+        .unitize(padding-left, 14);
+      }
+    }
+
+    .feature--user-comment {
+      .unitize(margin-bottom, 10);
+    }
+
+    .user-comment--field {
+      width: 100%;
+    }
+
+    .agb-and-revocation {
+      .panel--title {
+        .unitize(margin-bottom, 14);
+        .unitize(margin-top, 14);
+      }
+
+      #confirm--form .column--checkbox {
+        margin-right: 0.75rem;
+        width: auto;
+      }
+
+      #confirm--form .column--label {
+        display: block;
+        width: 90%;
+        font-weight: normal;
+        text-align: left;
+      }
+
+      .row--tos {
+        .unitize(margin-bottom, 14);
+      }
+    }
+
+  }
+
+  .choose-different-address {
+    .unitize(margin-top, 10);
+    .unitize(margin-bottom, 10);
+  }
+}
+
+#one-page-checkout.only-vertical {
+  .register--personal-data, .register--shipment-and-payment, .register--overview {
+    @media screen and(min-width: @desktopViewportWidth) {
+      width: 100%;
+    }
+  }
+
+  .agb--on-top {
+    width: 100%;
+  }
+}

@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<container xmlns="http://symfony.com/schema/dic/services" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+    <services>
+        <service id="effetto_one_page_checkout.subscriber.route" class="EffettoOnePageCheckout\Subscriber\RouteSubscriber">
+            <argument type="service" id="template"/>
+            <argument>%effetto_one_page_checkout.plugin_name%</argument>
+            <argument>%effetto_one_page_checkout.plugin_dir%</argument>
+            <argument type="service" id="shopware.plugin.cached_config_reader"/>
+            <tag name="shopware.event_subscriber"/>
+        </service>
+    </services>
+</container>

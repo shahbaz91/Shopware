@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/shopware/shopware/5.3/engine/Shopware/Components/Plugin/schema/config.xsd">
+    <elements>
+        <element type="boolean" required="true" scope="shop">
+            <name>useOnePageCheckout</name>
+            <label>Plugin für diesen Shop nutzen</label>
+        </element>
+        <element type="boolean" required="true" scope="shop">
+            <name>useStepsOnlyVertical</name>
+            <label>Schritte immer vertikal darstellen</label>
+            <description>Normalerweise werden die Checkout Schritte bei ausreichend Platz nebeneinander dargestellt und brechen erst bei kleineren Auflösungen um. Ist diese Option aktiviert, so werden die Schritte immer untereinander dargestellt.</description>
+        </element>
+        <element type="boolean" required="true" scope="shop">
+            <name>ShowPremiumProductArea</name>
+            <label>Prämien Produktauswahl nutzen</label>
+        </element>
+        <element type="boolean" required="true" scope="shop">
+            <name>AgbOnTop</name>
+            <label>AGBs oben darstellen</label>
+            <description>Laut https://de.shopware.com/news/die-wichtigsten-antworten-zur-button-loesung-fachanwalt-thomas-feil-im-interview/ ist es sicherer die AGBs direkt sichtbar oben im OPC darzustellen</description>
+        </element>
+        <element type="boolean" required="true" scope="shop">
+            <name>AdditionalShippingDisable</name>
+            <label>Seperate Lieferadresse hinzufügen deaktivieren</label>
+            <description>Entfernt die Möglichkeit im Checkout eine abweichende Lieferadresse zu wählen</description>
+        </element>
+        <element type="text">
+            <name>OpcPaymentsRedirectToPaymentPage</name>
+            <label>Zahlarten IDs zur Weiterleitung</label>
+            <description>Kommaseparierte Liste von Zahlarten IDs bei denen eine Weiterleitung zur Payment Page erfolgen soll.' . "\n" . '        Diese Option hilft beispielsweise Klarna Zahlung auf Rechnung zu unterstützen. Bitte IDs in der Form 1,5,20 hinterlegen</description>
+        </element>
+        <element type="boolean" required="true" scope="shop">
+            <name>PayPalRedirect</name>
+            <label>PayPal Redirect bei Fehler</label>
+            <description>Wenn aktiviert, wird bei einem PayPal Fehler oder Zahlabbruch der Nutzer nicht mehr auf die cancel Seite sondern direkt wieder in den One Page Checkout weitergeleitet.</description>
+        </element>
+        <element type="boolean" required="true" scope="shop">
+            <name>registerBeforeLogin</name>
+            <label>Registrierung vor Login</label>
+            <description>Wenn aktiviert, wird die Registrierung vor dem Login gezeigt.</description>
+        </element>
+        <element type="boolean" required="true" scope="shop">
+            <name>loginInitiallyOpen</name>
+            <label>Loginbereich initial geöffnet</label>
+            <description>Wenn aktiviert, wird der Loginbereich initial offen gezeigt.</description>
+        </element>
+        <element type="boolean" required="true" scope="shop">
+            <name>zipBeforeStreet</name>
+            <label>PLZ vor Strasse</label>
+            <description>Wenn aktiviert, wird die die PLZ vor der Strasse gezeigt. Dies kann sinnvoll sein wenn Sie einen Autocomplete nutzen</description>
+        </element>
+    </elements>
+</config>
